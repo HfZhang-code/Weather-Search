@@ -1,15 +1,14 @@
 .header {
-    width: 60%;
+    width: 100%;
     text-align: center;
     height: 60px;
-    line-height: 60px;
     vertical-align: center;
 }
 
 .main {
     /*display: flex;*/
     /*flex-direction: column;*/
-    background-color: #176ebe;
+    background-color: rgb(56, 56, 238);
     /*margin: 0 auto;*/
     /*text-align: center;*/
 }
@@ -17,7 +16,7 @@
 .main-body {
     margin: 0 auto;
     width: 80%;
-    color: white;
+    color:black;
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -68,3 +67,19 @@
 #wind {
     margin-left: 10px;
 }
+
+div strong {
+    background-color:red;
+  }
+
+/* @media only screen and (max-width: 500px) {
+    .main {
+        display: flex;
+        width:100%;
+        flex-direction: column;
+        background-color: rgb(56, 56, 238);
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+} */

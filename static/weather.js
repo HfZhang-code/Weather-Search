@@ -8,20 +8,29 @@ $(function () {
 var initPage = () => {
     let city = "Boston";
     let url = baseURL + "&q=" + city;
-    $.ajax({
-        url: url,
-        method: "get",
-        dataType: 'jsonp',
-        contentType: 'application/json',
-        timeout: 2000,
-        success: function (res) {
-            initWeather(res);
-        },
-        // jsonpCallback: "initWeather",
-        error: (jqXHR, textStatus) => {
-            // console.log(textStatus)
-        }
-    })
+    fetch(url)
+    .then(response => response.json())
+    .then(data => initWeather(data))
+    .catch(err => {
+        console.error(err);
+
+    });
+
+    // $.ajax({
+    //     url: url,
+    //     method: "get",
+    //     dataType: 'jsonp',
+    //     contentType: 'application/json',
+    //     timeout: 2000,
+    //     success: function (res) {
+    //         initWeather(res);
+    //     },
+    //     // jsonpCallback: "initWeather",
+    //     error: (jqXHR, textStatus) => {
+    //         // console.log(textStatus)
+    //     }
+    // })
+
 
 }
 
@@ -35,13 +44,23 @@ function doSearch() {
     }
 
     let url = baseURL + "&q=" + city;
-    $.ajax({
-        url: url,
-        method: "get",
-        dataType: 'jsonp',
-        contentType: 'application/json',
-        jsonpCallback: "initWeather"
-    })
+    // $.ajax({
+    //     url: url,
+    //     method: "get",
+    //     dataType: 'jsonp',
+    //     contentType: 'application/json',
+    //     jsonpCallback: "initWeather"
+    // })
+    fetch(url)
+    .then(response => response.json())
+    .then(data => initWeather(data))
+    .catch(err => {
+        console.error(err);
+
+    });
+
+    console.log("search completely!!!!!!!");
+
 
 }
 
