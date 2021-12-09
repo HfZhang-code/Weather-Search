@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Home</title>
+    <link rel="stylesheet" type="text/css" href="static/weather.css">
+
+    <script type="text/javascript" src="static/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="static/weather.js"></script>
+</head>
+<body>
+<div class="header">
+    <img src="static/logo.png" alt="logo" width="200" height="60">
+</div>
+<div class="main">
+    <div class="main-body">
+        <div class="searchBox">
+            <input id="searchCity" type="text" value="" placeholder="input the city"/>
+            <!--            <input id="searchDate" type="date" placeholder="choose the time"/>-->
+            <button onclick="doSearch()">Search</button>
+        </div>
+        <div class="simple-box">
+            <div>
+                <strong id="showCity">Location</strong>
+                <span>Today: <span id="desc"></span> </span>
+            </div>
+            <div>
+                <span id="lon"></span>
+                <br>
+                <span id="lat"></span>
+            </div>
+            <div class="simple-box-right">
+                <span id="wDate"></span>
+            </div>
+        </div>
+        <div class="detail-box">
+            <div class="detail-header">
+                <strong id="temp"></strong>
+                <span id="desc1"></span>
+                <span id="wind"></span>
+            </div>
+            <div class="detail-body">
+                <span class="feels_like"></span>
+                <span class="temp_min"></span>
+                <span class="temp_max"></span>
+                <span class="pressure"></span>
+                <span class="humidity"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
