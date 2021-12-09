@@ -5,9 +5,20 @@ $(function () {
     initPage();
 })
 
+class APIURL{
+    constructor(city){
+        this.city = city;
+    }
+    getURL(){
+        return baseURL + "&q=" + this.city;
+    }
+}
+
 var initPage = () => {
     let city = "Boston";
-    let url = baseURL + "&q=" + city;
+    var geturl = new APIURL(city)
+    let url =geturl.getURL();
+    // let url = baseURL + "&q=" + city;
     fetch(url)
     .then(response => response.json())
     .then(data => initWeather(data))
@@ -44,13 +55,7 @@ function doSearch() {
     }
 
     let url = baseURL + "&q=" + city;
-    // $.ajax({
-    //     url: url,
-    //     method: "get",
-    //     dataType: 'jsonp',
-    //     contentType: 'application/json',
-    //     jsonpCallback: "initWeather"
-    // })
+
     fetch(url)
     .then(response => response.json())
     .then(data => initWeather(data))
@@ -60,6 +65,7 @@ function doSearch() {
     });
 
     console.log("search completely!!!!!!!");
+
 
 
 }
@@ -91,5 +97,6 @@ var initWeather = (res) => {
     $(".temp_max").text(" | Temp Max: " + res.main.temp_max);
     $(".pressure").text(" | Pressure: " + res.main.pressure);
     $(".humidity").text(" | Humidity: " + res.main.humidity);
+    console.log(res);
 
 }

@@ -16,12 +16,11 @@
 .main-body {
     margin: 0 auto;
     width: 80%;
-    color:black;
+    color:white;
     height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*align-items: center;*/
 }
 
 .searchBox {
@@ -69,7 +68,7 @@
 }
 
 div strong {
-    background-color:red;
+    background-color:black;
   }
 
 /* @media only screen and (max-width: 500px) {
@@ -83,3 +82,38 @@ div strong {
     }
     
 } */
+input::placeholder {
+    color:black;
+    font-size: 1.2em;
+    font-style: italic;
+  }
+
+  #temp:hover{
+      background-color: blue;
+  }
+
+  .simple-box div:last-child{
+    font-size: 150%;
+    font-weight: bold;
+  }
+
+  #showCity:hover{
+    background-color: blue;
+
+  }
+  button{
+      font-size: 24px;
+  }
+
+  button:hover{
+      background-color: cyan;
+  }
+
+  button:active{
+      background-color: rgb(6, 129, 129);
+      
+  }
+
+  span::selection{
+      background-color: black;
+  }
