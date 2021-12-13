@@ -1,119 +1,227 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:blue;
+}
+
 .header {
-    width: 100%;
-    text-align: center;
-    height: 60px;
-    vertical-align: center;
-}
-
-.main {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    background-color: rgb(56, 56, 238);
-    /*margin: 0 auto;*/
-    /*text-align: center;*/
-}
-
-.main-body {
-    margin: 0 auto;
     width: 80%;
-    color:white;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    text-align: left;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: center;
+    margin: 0 auto;
 }
 
-.searchBox {
-    /*margin-top: 10px;*/
-    width: 300px;
+
+.header img {
+    width: 200px;
+    height: 60px;
+}
+input{
+    line-height: 250%;
 }
 
-.simple-box {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    justify-content: space-between;
-}
-
-.simple-box strong {
-    font-size: 26px;
-    margin-right: 10px;
-}
-
-#wDate {
-    /*float: right;*/
-    line-height: 40px;
-}
-
-.detail-box {
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: space-around;*/
-}
-
-.detail-header strong {
-    font-size: 60px;
-}
-
-.detail-body {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#wind {
-    margin-left: 10px;
-}
-
-div strong {
-    background-color:black;
-  }
-
-/* @media only screen and (max-width: 500px) {
-    .main {
-        display: flex;
-        width:100%;
-        flex-direction: column;
-        background-color: rgb(56, 56, 238);
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-} */
 input::placeholder {
     color:black;
-    font-size: 1.2em;
+    font-size: 2.2em;
     font-style: italic;
   }
 
-  #temp:hover{
-      background-color: blue;
-  }
 
-  .simple-box div:last-child{
- 
-    font-weight: bold;
-  }
+.main .main-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 90%;
+    height: 600px;
+    color: white;
+    font-size: 200%;
+}
 
-  #showCity:hover{
-    background-color: blue;
+.searchBox {
+    margin-top: 30px;
+}
 
-  }
-  button{
-      font-size: 24px;
-  }
+.searchBox > input {
+    width: 300px;
+}
 
-  button:hover{
-      background-color: cyan;
-  }
+input:first-child + button {
+    border-radius: 20px;
+    font-size: 24px;
 
-  button:active{
-      background-color: rgb(6, 129, 129);
-      
-  }
+}
 
-  span::selection{
-      background-color: black;
-  }
+.searchBox + .simple-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-around;
+}
+
+strong + span {
+    margin-left: 20px;
+}
+
+
+
+#temp + span {
+    margin-right: 10px;
+}
+
+#temp ~ span {
+    margin-left: 10px;
+}
+
+div strong{
+    font-size: 60px;
+}
+
+.detail-box {
+    margin-top: 20px;
+}
+
+
+
+
+.detail-body {
+    margin-top: 20px;
+
+}
+
+.detail-body > span {
+    margin-left: 10px;
+}
+
+select{
+    font-size: 150%;
+}
+
+@media (min-device-width: 600px) {
+
+    .header {
+        width: 100%;
+        text-align: center;
+        height: 60px;
+        vertical-align: center;
+    }
+
+
+
+    .main {
+        background-color:rgba(73, 73, 241, 0.808);
+        height: 600px;
+    }
+
+    .header img {
+        width: 200px;
+        height: 60px;
+    }
+
+    .main .main-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 90%;
+        height: 100%;
+        color: white;
+    }
+
+    .searchBox {
+        margin-top: 30px;
+    }
+
+    .searchBox > input {
+        width: 300px;
+    }
+
+    select{
+        font-size:150%;
+    }
+    .searchBox + .simple-box {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        justify-content: space-around;
+    }
+
+    strong + span {
+        margin-left: 20px;
+    }
+
+
+
+    #temp + span {
+        margin-right: 10px;
+    }
+
+    #temp ~ span {
+        margin-left: 10px;
+    }
+
+
+
+    .detail-box {
+        margin-top: 20px;
+    }
+
+
+
+    .detail-body {
+        margin-top: 20px;
+
+    }
+
+    .detail-body > span {
+        margin: 10px;
+
+    }
+
+    div strong {
+        background-color:cornflowerblue;
+        font-size: 50px;
+      }
+
+    input::placeholder {
+        color:black;
+        font-size: 1.2em;
+        font-style: italic;
+      }
+
+    input{
+        font-size: 80%;
+    }
+    
+    #temp:hover{
+          background-color: blue;
+    }
+
+    #showCity:hover{
+        background-color: blue;
+    
+    }
+    button{
+          font-size: 24px;
+    }
+    
+    button:hover{
+          background-color: cyan;
+    }
+
+    button:active{
+        background-color: rgb(6, 129, 129);
+        
+    }
+  
+    span::selection{
+        background-color: rgb(6, 129, 129)k;
+    }
+
+
+}
+
